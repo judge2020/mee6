@@ -44,7 +44,7 @@ def command(pattern=None, db_check=False, user_check=None, db_name=None,
         async def wrapper(self, message):
 
             # Is it matching?
-            match = prog.match(message.content)
+            match = prog.match(message.content.lower())
             if not match:
                 return
 
